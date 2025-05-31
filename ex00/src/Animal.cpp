@@ -1,11 +1,11 @@
 #include "../inc/Animal.hpp"
 #include <iostream>
 
-Animal::Animal() : m_type("Animal") {
+Animal::Animal() : m_type{"Animal"} {
 	std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal& other) : m_type(other.m_type) {
+Animal::Animal(const Animal& other) : m_type{other.m_type} {
 	std::cout << "Animal copy constructor called" << std::endl;
 }
 

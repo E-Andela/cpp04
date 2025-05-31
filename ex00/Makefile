@@ -8,7 +8,9 @@ SRC_DIR = src
 SRC = $(SRC_DIR)/main.cpp \
 	  $(SRC_DIR)/Animal.cpp \
 	  $(SRC_DIR)/Dog.cpp \
-	  $(SRC_DIR)/Cat.cpp
+	  $(SRC_DIR)/Cat.cpp \
+	  $(SRC_DIR)/WrongAnimal.cpp \
+	  $(SRC_DIR)/WrongCat.cpp
 
 OBJ_DIR = obj
 OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
