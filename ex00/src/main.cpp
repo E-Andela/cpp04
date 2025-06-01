@@ -7,23 +7,20 @@
 #include <iostream>
 
 int main() {
-	Animal* animals[4];
+	
+	Animal* dog = new Dog();
+	Animal* cat = new Cat();
 
-	for (int i = 0; i < 2; ++i) {
-		animals[i] = new Dog();
-	}
-	for (int i = 2; i < 4; ++i) {
-		animals[i] = new Cat();
-	}
+	dog->makeSound();
+	cat->makeSound();
 
-	for (int i = 0; i < 4; ++i) {
-		animals[i]->makeSound();
-		delete animals[i];
-	}
+	WrongAnimal* wrongAnimal = new WrongCat();
 
-	WrongAnimal* WrongAnimal = new WrongCat();
-	WrongAnimal->makeSound();
-	delete WrongAnimal;
+	wrongAnimal->makeSound();
+
+	delete dog;
+	delete cat;
+	delete wrongAnimal;
 
 	return 0;
 }
